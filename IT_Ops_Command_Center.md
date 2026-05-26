@@ -90,7 +90,7 @@ PTO – [First Name] | [Month Day–Day]
 | GitHub | ✅ Connected | Hosts this .md file |
 | EzraMcC Calendar | ✅ Active | All calendar events |
 
-**GitHub Repo:** [github.com/webguru-emcc/ITOpsClickup](https://github.com/webguru-emcc/ITOpsClickup)
+**GitHub Repo:** [github.com/webguru-emcc/ITOpsProjects](https://github.com/webguru-emcc/ITOpsProjects)
 
 ---
 
