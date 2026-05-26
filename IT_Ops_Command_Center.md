@@ -1,5 +1,5 @@
 # IT Operations – Command Center Reference
-*Last Updated: May 25, 2026 (updated)*
+*Last Updated: May 25, 2026*
 
 ---
 
@@ -21,42 +21,47 @@ Imran, Wasim, Julian, Venkat
 
 ---
 
-## 🗂️ ClickUp Workspace Structure
+## 🗂️ Notion Workspace Structure
 
-**Workspace ID:** 90141284293
-**Space:** IT Operations
+**Primary Tool:** Notion (free plan)
+**Top-Level Page:** 🖥️ IT Operations
 
-| Folder | Lists |
-|--------|-------|
+| Section | Databases |
+|---------|-----------|
 | Infrastructure Operations | Active Projects, Tickets & Changes |
 | Windows Team | Active Projects, Tickets & Changes |
 | Linux Team | Active Projects, Tickets & Changes |
-| *(Space-level)* | Cross-Team Projects, PTO Tracker, Get Started with ClickUp |
+| 📋 PTO Tracker *(shared, top-level)* | PTO Tracker |
+
+### Database Fields
+**Active Projects:** Name, Team Member, Status, Priority, Due Date, Notes
+**Tickets & Changes:** Name, Team Member, Status, Priority, Type (Ticket/Change), Due Date, Notes
+**PTO Tracker:** Name, Team Member, Team, Start Date, End Date, Notes
+
+### Team Member Dropdowns
+- **Infrastructure Operations:** Kyle, Reema, Maurice, Isaac, Ezra
+- **Windows Team:** Joe, Taylor, Eric
+- **Linux Team:** Imran, Wasim, Julian, Venkat
+- **PTO Tracker:** All 11 members + Team field
 
 ---
 
 ## 🏖️ PTO Tracker
 
-**List ID:** 901416723224
+**Notion Page:** 📋 PTO Tracker
+**Data Source ID:** 75e2ac81-f902-4691-b37e-048183e9944f
 
-### Conventions
-**Naming:**
+### Naming Convention
 ```
 PTO – [First Name] | [Month Day–Day]
 ```
-**Due Date:** Set to the **first day** of PTO (so ClickUp email alerts fire at the start of the absence)
-
-**Examples:**
-- `PTO – Ezra | Jun 3–7`
-- `PTO – Imran | Jun 10–11`
-- `PTO – Taylor | Jul 4`
 
 ### Current PTO Entries
-| Name | Dates | Task ID |
-|------|-------|---------|
-| Reema | Jun 25–29, 2026 | 86ba3pebw |
-| Reema | Jul 22–27, 2026 | 86ba3pecc |
-| Eric | May 26–Jun 3, 2026 | 86ba3pecn |
+| Name | Team | Start | End |
+|------|------|-------|-----|
+| Reema | Infrastructure Operations | Jun 25, 2026 | Jun 29, 2026 |
+| Reema | Infrastructure Operations | Jul 22, 2026 | Jul 27, 2026 |
+| Eric | Windows Team | May 26, 2026 | Jun 3, 2026 |
 
 ---
 
@@ -70,16 +75,30 @@ PTO – [First Name] | [Month Day–Day]
 ### Recurring Events
 | Event | Schedule | Notes |
 |-------|----------|-------|
-| 🏖️ Weekly PTO Check – Who's Out This Week? | Every Monday at 8:00 AM | Check ClickUp PTO Tracker; link included in event |
-| 📬 Review ClickUp Email Notifications Setup | Tue May 26 at 10:00 AM | One-time; 10 min reminder |
+| 🏖️ Weekly PTO Check – Who's Out This Week? | Every Monday at 8:00 AM | Check Notion PTO Tracker |
+| 📬 Review Notion Email Notifications Setup | Tue May 26 at 10:00 AM | One-time; 10 min reminder |
+
+---
+
+## 🔗 Tools & Integrations
+
+| Tool | Status | Purpose |
+|------|--------|---------|
+| Notion | ✅ Connected | Projects, Tickets, PTO tracking |
+| ClickUp (IT Ops workspace) | ⚠️ Deprecated | Replaced by Notion |
+| ClickUp (IT Operations workspace) | ⚠️ Deprecated | Original workspace |
+| GitHub | ✅ Connected | Hosts this .md file |
+| EzraMcC Calendar | ✅ Active | All calendar events |
+
+**GitHub Repo:** [github.com/webguru-emcc/ITOpsClickup](https://github.com/webguru-emcc/ITOpsClickup)
 
 ---
 
 ## 📋 Pending / To-Do
 
-- [ ] **Review ClickUp email notifications** (scheduled Tue May 26, 10 AM)
-  - PTO Tracker, Active Projects, Tickets & Changes, Cross-Team Projects
-  - Goal: enable real-time email alerts for key events
+- [ ] **Review Notion email notifications** (scheduled Tue May 26, 10 AM)
+  - Goal: enable real-time email alerts for key events (new entries, status changes)
+- [ ] **Delete old ClickUp workspaces** (IT Operations + IT Ops) — no longer needed
 
 ---
 
@@ -89,17 +108,17 @@ If you ever need to start a new chat, paste this entire .md file at the top of t
 
 > *"You are Ezra, Director of IT Operations. Here is our reference doc — pick up where we left off."*
 
-Claude will have full context on the team, ClickUp structure, PTO conventions, and calendar setup immediately.
+Claude will have full context on the team, Notion structure, PTO conventions, and calendar setup immediately.
 
 **What persists without the .md:**
-- ClickUp tasks (always saved)
+- Notion databases and entries (always saved)
 - Calendar events in EzraMcC (always saved)
 - EzraMcC calendar preference (saved in Claude memory)
 
 **What requires the .md to restore:**
 - Team roster and structure
-- ClickUp list IDs and conventions
-- PTO naming and due date rules
+- Notion data source IDs and conventions
+- PTO naming rules
 - Any ongoing projects or to-dos
 
 ---
@@ -107,5 +126,7 @@ Claude will have full context on the team, ClickUp structure, PTO conventions, a
 ## 🔧 Notes & Conventions
 
 - Use this chat as the ongoing IT Ops command center — no need to start a new chat for each task
-- ClickUp is fully connected and structured
+- Notion is the primary project/ticket/PTO tracking tool (free plan, no email invites needed for team members)
+- Team members are tracked via dropdown fields — no ClickUp/Notion accounts required for the team
 - Voice input: use device dictation (iOS mic on keyboard, Mac Dictation) to speak into this chat
+- GitHub token: stored privately — do not commit to repo. Paste into chat when needed.
