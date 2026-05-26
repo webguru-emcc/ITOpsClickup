@@ -28,48 +28,43 @@ Wasim, Julian, Venkat, Lonnie
 **Top-Level Page:** 🖥️ IT Operations
 **IT Operations Page ID:** 36c27749-5702-81be-8aad-ed521db72fcb
 
-| Section | Databases |
-|---------|-----------|
-| Infrastructure Operations | Active Projects, Tickets & Changes |
-| Windows Team | Active Projects, Tickets & Changes |
-| Linux Team | Active Projects, Tickets & Changes |
-| 📋 PTO Tracker *(shared, top-level)* | PTO Tracker |
-| ✅ To Do List | To Do List |
+| Section | Database |
+|---------|----------|
+| 📋 All Active Projects | Combined — all 3 teams |
+| 🎫 All Tickets & Changes | Combined — all 3 teams |
+| 🏖️ PTO Tracker | Shared — all 12 members |
+| ✅ To Do List | Ezra's personal tasks |
 | 📊 IT Ops Dashboard | Linked views of all databases |
 
 ### Key Data Source IDs
 | Database | Data Source ID |
 |----------|---------------|
-| Infra Ops – Active Projects | 731fb08d-31d7-49c8-95eb-41a069995226 |
-| Infra Ops – Tickets & Changes | 5f90e886-2d98-48ac-a96c-e451079fff56 |
-| Windows – Active Projects | 52439179-83bf-4baf-9f20-66f8cbab1140 |
-| Windows – Tickets & Changes | cc3a315a-82df-49a1-95eb-307fa1e12c92 |
-| Linux – Active Projects | 98e9b7d5-c80f-4fad-8fdb-640ca456fb72 |
-| Linux – Tickets & Changes | 4fa81853-30f8-4bfb-ae59-88f248365e68 |
+| All Active Projects | 3f9cf6dd-c7fa-4549-9395-d9e6ae71907e |
+| All Active Projects (URL ID) | 16178ce8063f4ff7bb0b9861bed7cac3 |
+| All Tickets & Changes | 188eb34d-d88a-4488-a053-7f0761ef7b7a |
 | PTO Tracker | 75e2ac81-f902-4691-b37e-048183e9944f |
 | To Do List | 9b9f85a5-34ab-446c-bba0-0e82b3632b2c |
 
 ### Database Fields
-**Active Projects:** Name, Team, Team Member, Status, Priority, Due Date, Notes
-**Tickets & Changes:** Name, Team, Team Member, Type (Ticket/Change), Status, Priority, Due Date, Notes
+**All Active Projects:** Name, Team, Team Member, Status, Priority, Due Date, Notes
+**All Tickets & Changes:** Name, Team, Team Member, Type (Ticket/Change), Status, Priority, Due Date, Notes
 **PTO Tracker:** Name, Team Member, Team, Start Date, End Date, Notes
 **To Do List:** Task, Status, Priority, Due Date, Notes
 
-### Team Member Dropdowns
+### Team Member Dropdowns (All databases)
 - **Infrastructure Operations:** Kyle, Reema, Maurice, Isaac, Ezra, Imran
 - **Windows Team:** Joe, Taylor, Eric
 - **Linux Team:** Wasim, Julian, Venkat, Lonnie
-- **PTO Tracker:** All 12 members + Team field
 
 ---
 
 ## 📊 IT Ops Dashboard
 
-**URL:** https://www.notion.so/36c27749570281bfa123ca202a2e8b9d
+**URL:** https://www.notion.so/36c27749570281a388e5f75526db1d82
 
-Contains 3 live views (auto-filtered, real-time):
-- 📋 **All Open Projects** — grouped by Team, sorted by Due Date
-- 🎫 **All Open Tickets & Changes** — grouped by Team, sorted by Priority
+Contains 3 live views (auto-filtered, real-time, flat list — no empty team sections):
+- 📋 **All Open Projects** — Status ≠ Completed, sorted by Team then Due Date
+- 🎫 **All Open Tickets & Changes** — Status ≠ Resolved/Closed, sorted by Team then Priority
 - 🏖️ **Open PTO** — sorted by Start Date
 
 ---
@@ -104,6 +99,23 @@ PTO – [First Name] | [Month Day–Day]
 
 ---
 
+## 📋 Active Projects
+
+| Project | Team Member | Team | Due Date | Status |
+|---------|-------------|------|----------|--------|
+| Deploy Skippy AI Servers in Prod Tenant | Kyle | Infrastructure Operations | May 29, 2026 | Not Started |
+| Install DevOps Servers in Prod Tenant | Reema | Infrastructure Operations | May 29, 2026 | Not Started |
+
+---
+
+## 🎫 Open Tickets & Changes
+
+| Ticket | Team Member | Team | Type | Status |
+|--------|-------------|------|------|--------|
+| RITM0021267 – Align Skippy Test Environment to Prod Standards | Ezra | Infrastructure Operations | Ticket | Open |
+
+---
+
 ## 📅 Calendar Setup
 
 **Primary Calendar:** EzraMcC
@@ -123,35 +135,21 @@ PTO – [First Name] | [Month Day–Day]
 | Tool | Status | Purpose |
 |------|--------|---------|
 | Notion | ✅ Connected | Projects, Tickets, PTO, To Do tracking |
-| ClickUp (IT Ops) | ⚠️ Deprecated | Replaced by Notion |
 | GitHub | ✅ Connected | Hosts this .md file |
 | EzraMcC Calendar | ✅ Active | All calendar events |
-| Make (Integromat) | ✅ Active | Daily email digest of open projects |
+| Make (Integromat) | ✅ Active | Daily email digest |
 
 **GitHub Repo:** [github.com/webguru-emcc/ITOpsProjects](https://github.com/webguru-emcc/ITOpsProjects)
 
 ### Make Scenario (Daily Email Digest)
-- Queries Infra Ops, Windows, Linux Active Projects for non-completed items
-- Sends daily email to ezramcc@gmail.com with link to Notion dashboard
-- **Pending fix:** Duplicate email issue + dynamic project listing in email body
+**Flow:** Schedule → Notion (Search All Active Projects) → Text Aggregator → Gmail
 
----
-
-## 📋 Active Projects
-
-| Project | Team Member | Team | Due Date | Status |
-|---------|-------------|------|----------|--------|
-| Install DevOps Servers in Prod Tenant | Reema | Infrastructure Operations | May 29, 2026 | Not Started |
-| Deploy Skippy AI Servers in Prod Tenant | Kyle | Infrastructure Operations | May 29, 2026 | Not Started |
-
----
-
-## 📋 Pending / To-Do
-
-- [ ] **Fix Make scenario** — duplicate email issue + pull live project data into email body
-- [ ] **Review Zoho Projects vs Notion** (reminder set for today noon)
-- [ ] **Delete old default Notion pages** (Getting Started, To Do List default pages)
-- [ ] **Create Monday 8AM recurring PTO calendar reminder** (pointing to Notion)
+- Queries All Active Projects for non-completed items
+- Text Aggregator consolidates results into single trigger (prevents duplicate emails)
+- Sends one daily email to ezramcc@gmail.com with link to Notion dashboard
+- Notion URL ID used in Make: `16178ce8063f4ff7bb0b9861bed7cac3`
+- Filter: Status (Select) does not equal Completed
+- **Make IT Ops** integration must be connected to all Notion databases
 
 ---
 
@@ -170,7 +168,7 @@ If you ever need to start a new chat, paste this entire .md file at the top of t
 
 **What requires the .md to restore:**
 - Full database field details
-- Active project list
+- Active project and ticket list
 - Make scenario details
 - Pending to-dos
 
@@ -180,6 +178,6 @@ If you ever need to start a new chat, paste this entire .md file at the top of t
 
 - Use this chat as the ongoing IT Ops command center
 - Notion is the primary tracking tool — team members tracked via dropdown (no accounts needed)
-- Always set Team field when creating projects/tickets so dashboard grouping works correctly
+- Always set Team AND Team Member fields when creating projects/tickets so dashboard works correctly
 - GitHub token: stored privately — do not commit to repo. Paste into chat when needed.
 - Voice input: use device dictation (iOS mic on keyboard, Mac Dictation) to speak into this chat
