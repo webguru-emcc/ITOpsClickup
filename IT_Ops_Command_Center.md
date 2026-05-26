@@ -82,9 +82,15 @@ PTO – [First Name] | [Month Day–Day]
 ### Current PTO Entries
 | Name | Team | Start | End |
 |------|------|-------|-----|
-| Reema | Infrastructure Operations | Jun 25, 2026 | Jun 29, 2026 |
-| Reema | Infrastructure Operations | Jul 22, 2026 | Jul 27, 2026 |
+| Maurice | Infrastructure Operations | May 28, 2026 | May 28, 2026 |
 | Eric | Windows Team | May 26, 2026 | Jun 3, 2026 |
+| Taylor | Windows Team | Jun 1, 2026 | Jun 2, 2026 |
+| Venkat | Linux Team | Jun 1, 2026 | Jun 5, 2026 |
+| Eric | Windows Team | Jun 8, 2026 | Jun 11, 2026 |
+| Reema | Infrastructure Operations | Jun 25, 2026 | Jun 29, 2026 |
+| Taylor | Windows Team | Jun 29, 2026 | Jul 6, 2026 |
+| Joe | Windows Team | Jul 6, 2026 | Jul 17, 2026 |
+| Reema | Infrastructure Operations | Jul 22, 2026 | Jul 27, 2026 |
 
 ---
 
