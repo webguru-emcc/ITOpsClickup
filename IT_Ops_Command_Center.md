@@ -11,13 +11,13 @@
 ## 👥 Teams
 
 ### Infrastructure Operations
-Kyle, Reema, Maurice, Isaac, Ezra
+Kyle, Reema, Maurice, Isaac, Ezra, Imran
 
 ### Windows Team
 Joe, Taylor, Eric
 
 ### Linux Team
-Imran, Wasim, Julian, Venkat
+Wasim, Julian, Venkat, Lonnie
 
 ---
 
@@ -39,10 +39,10 @@ Imran, Wasim, Julian, Venkat
 **PTO Tracker:** Name, Team Member, Team, Start Date, End Date, Notes
 
 ### Team Member Dropdowns
-- **Infrastructure Operations:** Kyle, Reema, Maurice, Isaac, Ezra
+- **Infrastructure Operations:** Kyle, Reema, Maurice, Isaac, Ezra, Imran
 - **Windows Team:** Joe, Taylor, Eric
-- **Linux Team:** Imran, Wasim, Julian, Venkat
-- **PTO Tracker:** All 11 members + Team field
+- **Linux Team:** Wasim, Julian, Venkat, Lonnie
+- **PTO Tracker:** All 12 members + Team field
 
 ---
 
