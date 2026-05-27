@@ -34,6 +34,7 @@ Wasim, Julian, Venkat, Lonnie
 | 🎫 All Tickets & Changes | Combined — all 3 teams |
 | 🏖️ PTO Tracker | Shared — all 12 members |
 | ✅ To Do List | Ezra's personal tasks |
+| 📁 Document Library | SOPs, Runbooks, Policies, References, Templates |
 | 📊 IT Ops Dashboard | Linked views of all databases |
 
 ### Key Data Source IDs
@@ -44,12 +45,14 @@ Wasim, Julian, Venkat, Lonnie
 | All Tickets & Changes | 188eb34d-d88a-4488-a053-7f0761ef7b7a |
 | PTO Tracker | 75e2ac81-f902-4691-b37e-048183e9944f |
 | To Do List | 9b9f85a5-34ab-446c-bba0-0e82b3632b2c |
+| Document Library | 1494bb36-7e8a-4f1a-b64c-6562dbc54fdc |
 
 ### Database Fields
 **All Active Projects:** Name, Team, Team Member, Status, Priority, Due Date, Notes
 **All Tickets & Changes:** Name, Team, Team Member, Type (Ticket/Change), Status, Priority, Due Date, Notes
 **PTO Tracker:** Name, Team Member, Team, Start Date, End Date, Notes
 **To Do List:** Task, Status, Priority, Due Date, Notes
+**Document Library:** Document Name, Category (Runbook/SOP/Policy/Reference/Template/Other), Team, Last Updated, Notes
 
 ### Team Member Dropdowns (All databases)
 - **Infrastructure Operations:** Kyle, Reema, Maurice, Isaac, Ezra, Imran
